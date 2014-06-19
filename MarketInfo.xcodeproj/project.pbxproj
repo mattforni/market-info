@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E5D958B195289A1008BDAC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5D958A195289A1008BDAC0 /* Foundation.framework */; };
+		0E5D958D195289A1008BDAC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5D958C195289A1008BDAC0 /* CoreGraphics.framework */; };
+		0E5D958F195289A1008BDAC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5D958E195289A1008BDAC0 /* UIKit.framework */; };
+		0E5D9595195289A1008BDAC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E5D9593195289A1008BDAC0 /* InfoPlist.strings */; };
+		0E5D9597195289A1008BDAC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D9596195289A1008BDAC0 /* main.m */; };
+		0E5D959B195289A1008BDAC0 /* MIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D959A195289A1008BDAC0 /* MIAppDelegate.m */; };
+		0E5D959D195289A1008BDAC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5D959C195289A1008BDAC0 /* Images.xcassets */; };
+		0E5D95A4195289A1008BDAC0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5D95A3195289A1008BDAC0 /* XCTest.framework */; };
+		0E5D95A5195289A1008BDAC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5D958A195289A1008BDAC0 /* Foundation.framework */; };
+		0E5D95A6195289A1008BDAC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5D958E195289A1008BDAC0 /* UIKit.framework */; };
+		0E5D95AE195289A1008BDAC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E5D95AC195289A1008BDAC0 /* InfoPlist.strings */; };
+		0E5D95B0195289A1008BDAC0 /* MarketInfoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D95AF195289A1008BDAC0 /* MarketInfoTests.m */; };
+		0E5D95BA195289C7008BDAC0 /* MarketInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5D95B9195289C7008BDAC0 /* MarketInfo.storyboard */; };
+		0E5D95BD19528BA2008BDAC0 /* MIMarketsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D95BC19528BA2008BDAC0 /* MIMarketsViewController.m */; };
+		0E5D95C019528E45008BDAC0 /* MIMarketData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D95BF19528E45008BDAC0 /* MIMarketData.m */; };
+		0E5D95C319528F49008BDAC0 /* MIMarket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D95C219528F49008BDAC0 /* MIMarket.m */; };
+		0E796AE31953AD0900D6F7FD /* MIUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E796AE21953AD0900D6F7FD /* MIUIHelper.m */; };
+		0E796AE61953C1DA00D6F7FD /* MIStatusLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E796AE51953C1DA00D6F7FD /* MIStatusLabel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E5D95A7195289A1008BDAC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E5D957F195289A1008BDAC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E5D9586195289A1008BDAC0;
+			remoteInfo = MarketInfo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E5D9587195289A1008BDAC0 /* MarketInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E5D958A195289A1008BDAC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0E5D958C195289A1008BDAC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0E5D958E195289A1008BDAC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0E5D9592195289A1008BDAC0 /* MarketInfo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarketInfo-Info.plist"; sourceTree = "<group>"; };
+		0E5D9594195289A1008BDAC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0E5D9596195289A1008BDAC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0E5D9598195289A1008BDAC0 /* MarketInfo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarketInfo-Prefix.pch"; sourceTree = "<group>"; };
+		0E5D9599195289A1008BDAC0 /* MIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIAppDelegate.h; sourceTree = "<group>"; };
+		0E5D959A195289A1008BDAC0 /* MIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MIAppDelegate.m; sourceTree = "<group>"; };
+		0E5D959C195289A1008BDAC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0E5D95A2195289A1008BDAC0 /* MarketInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarketInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E5D95A3195289A1008BDAC0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		0E5D95AB195289A1008BDAC0 /* MarketInfoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MarketInfoTests-Info.plist"; sourceTree = "<group>"; };
+		0E5D95AD195289A1008BDAC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0E5D95AF195289A1008BDAC0 /* MarketInfoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarketInfoTests.m; sourceTree = "<group>"; };
+		0E5D95B9195289C7008BDAC0 /* MarketInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MarketInfo.storyboard; sourceTree = "<group>"; };
+		0E5D95BB19528BA2008BDAC0 /* MIMarketsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIMarketsViewController.h; sourceTree = "<group>"; };
+		0E5D95BC19528BA2008BDAC0 /* MIMarketsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIMarketsViewController.m; sourceTree = "<group>"; };
+		0E5D95BE19528E45008BDAC0 /* MIMarketData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIMarketData.h; sourceTree = "<group>"; };
+		0E5D95BF19528E45008BDAC0 /* MIMarketData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIMarketData.m; sourceTree = "<group>"; };
+		0E5D95C119528F49008BDAC0 /* MIMarket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIMarket.h; sourceTree = "<group>"; };
+		0E5D95C219528F49008BDAC0 /* MIMarket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIMarket.m; sourceTree = "<group>"; };
+		0E796AE11953AD0900D6F7FD /* MIUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUIHelper.h; sourceTree = "<group>"; };
+		0E796AE21953AD0900D6F7FD /* MIUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUIHelper.m; sourceTree = "<group>"; };
+		0E796AE41953C1DA00D6F7FD /* MIStatusLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIStatusLabel.h; sourceTree = "<group>"; };
+		0E796AE51953C1DA00D6F7FD /* MIStatusLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIStatusLabel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E5D9584195289A1008BDAC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5D958D195289A1008BDAC0 /* CoreGraphics.framework in Frameworks */,
+				0E5D958F195289A1008BDAC0 /* UIKit.framework in Frameworks */,
+				0E5D958B195289A1008BDAC0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E5D959F195289A1008BDAC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5D95A4195289A1008BDAC0 /* XCTest.framework in Frameworks */,
+				0E5D95A6195289A1008BDAC0 /* UIKit.framework in Frameworks */,
+				0E5D95A5195289A1008BDAC0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E5D957E195289A1008BDAC0 = {
+			isa = PBXGroup;
+			children = (
+				0E5D9590195289A1008BDAC0 /* MarketInfo */,
+				0E5D95A9195289A1008BDAC0 /* MarketInfoTests */,
+				0E5D9589195289A1008BDAC0 /* Frameworks */,
+				0E5D9588195289A1008BDAC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0E5D9588195289A1008BDAC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E5D9587195289A1008BDAC0 /* MarketInfo.app */,
+				0E5D95A2195289A1008BDAC0 /* MarketInfoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E5D9589195289A1008BDAC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E5D958A195289A1008BDAC0 /* Foundation.framework */,
+				0E5D958C195289A1008BDAC0 /* CoreGraphics.framework */,
+				0E5D958E195289A1008BDAC0 /* UIKit.framework */,
+				0E5D95A3195289A1008BDAC0 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0E5D9590195289A1008BDAC0 /* MarketInfo */ = {
+			isa = PBXGroup;
+			children = (
+				0E5D9599195289A1008BDAC0 /* MIAppDelegate.h */,
+				0E5D959A195289A1008BDAC0 /* MIAppDelegate.m */,
+				0E5D959C195289A1008BDAC0 /* Images.xcassets */,
+				0E5D9591195289A1008BDAC0 /* Supporting Files */,
+				0E5D95B9195289C7008BDAC0 /* MarketInfo.storyboard */,
+				0E796AE41953C1DA00D6F7FD /* MIStatusLabel.h */,
+				0E796AE51953C1DA00D6F7FD /* MIStatusLabel.m */,
+				0E5D95BB19528BA2008BDAC0 /* MIMarketsViewController.h */,
+				0E5D95BC19528BA2008BDAC0 /* MIMarketsViewController.m */,
+				0E796AE11953AD0900D6F7FD /* MIUIHelper.h */,
+				0E796AE21953AD0900D6F7FD /* MIUIHelper.m */,
+				0E5D95BE19528E45008BDAC0 /* MIMarketData.h */,
+				0E5D95BF19528E45008BDAC0 /* MIMarketData.m */,
+				0E5D95C119528F49008BDAC0 /* MIMarket.h */,
+				0E5D95C219528F49008BDAC0 /* MIMarket.m */,
+			);
+			path = MarketInfo;
+			sourceTree = "<group>";
+		};
+		0E5D9591195289A1008BDAC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E5D9592195289A1008BDAC0 /* MarketInfo-Info.plist */,
+				0E5D9593195289A1008BDAC0 /* InfoPlist.strings */,
+				0E5D9596195289A1008BDAC0 /* main.m */,
+				0E5D9598195289A1008BDAC0 /* MarketInfo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E5D95A9195289A1008BDAC0 /* MarketInfoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E5D95AF195289A1008BDAC0 /* MarketInfoTests.m */,
+				0E5D95AA195289A1008BDAC0 /* Supporting Files */,
+			);
+			path = MarketInfoTests;
+			sourceTree = "<group>";
+		};
+		0E5D95AA195289A1008BDAC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E5D95AB195289A1008BDAC0 /* MarketInfoTests-Info.plist */,
+				0E5D95AC195289A1008BDAC0 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E5D9586195289A1008BDAC0 /* MarketInfo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E5D95B3195289A1008BDAC0 /* Build configuration list for PBXNativeTarget "MarketInfo" */;
+			buildPhases = (
+				0E5D9583195289A1008BDAC0 /* Sources */,
+				0E5D9584195289A1008BDAC0 /* Frameworks */,
+				0E5D9585195289A1008BDAC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MarketInfo;
+			productName = MarketInfo;
+			productReference = 0E5D9587195289A1008BDAC0 /* MarketInfo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E5D95A1195289A1008BDAC0 /* MarketInfoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E5D95B6195289A1008BDAC0 /* Build configuration list for PBXNativeTarget "MarketInfoTests" */;
+			buildPhases = (
+				0E5D959E195289A1008BDAC0 /* Sources */,
+				0E5D959F195289A1008BDAC0 /* Frameworks */,
+				0E5D95A0195289A1008BDAC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E5D95A8195289A1008BDAC0 /* PBXTargetDependency */,
+			);
+			name = MarketInfoTests;
+			productName = MarketInfoTests;
+			productReference = 0E5D95A2195289A1008BDAC0 /* MarketInfoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E5D957F195289A1008BDAC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MI;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___MATTFORNI___";
+				TargetAttributes = {
+					0E5D95A1195289A1008BDAC0 = {
+						TestTargetID = 0E5D9586195289A1008BDAC0;
+					};
+				};
+			};
+			buildConfigurationList = 0E5D9582195289A1008BDAC0 /* Build configuration list for PBXProject "MarketInfo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0E5D957E195289A1008BDAC0;
+			productRefGroup = 0E5D9588195289A1008BDAC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E5D9586195289A1008BDAC0 /* MarketInfo */,
+				0E5D95A1195289A1008BDAC0 /* MarketInfoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E5D9585195289A1008BDAC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5D9595195289A1008BDAC0 /* InfoPlist.strings in Resources */,
+				0E5D959D195289A1008BDAC0 /* Images.xcassets in Resources */,
+				0E5D95BA195289C7008BDAC0 /* MarketInfo.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E5D95A0195289A1008BDAC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5D95AE195289A1008BDAC0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E5D9583195289A1008BDAC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5D959B195289A1008BDAC0 /* MIAppDelegate.m in Sources */,
+				0E5D95C019528E45008BDAC0 /* MIMarketData.m in Sources */,
+				0E5D9597195289A1008BDAC0 /* main.m in Sources */,
+				0E5D95BD19528BA2008BDAC0 /* MIMarketsViewController.m in Sources */,
+				0E5D95C319528F49008BDAC0 /* MIMarket.m in Sources */,
+				0E796AE61953C1DA00D6F7FD /* MIStatusLabel.m in Sources */,
+				0E796AE31953AD0900D6F7FD /* MIUIHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E5D959E195289A1008BDAC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E5D95B0195289A1008BDAC0 /* MarketInfoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E5D95A8195289A1008BDAC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E5D9586195289A1008BDAC0 /* MarketInfo */;
+			targetProxy = 0E5D95A7195289A1008BDAC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0E5D9593195289A1008BDAC0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E5D9594195289A1008BDAC0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0E5D95AC195289A1008BDAC0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E5D95AD195289A1008BDAC0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0E5D95B1195289A1008BDAC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0E5D95B2195289A1008BDAC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E5D95B4195289A1008BDAC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MarketInfo/MarketInfo-Prefix.pch";
+				INFOPLIST_FILE = "MarketInfo/MarketInfo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0E5D95B5195289A1008BDAC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MarketInfo/MarketInfo-Prefix.pch";
+				INFOPLIST_FILE = "MarketInfo/MarketInfo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0E5D95B7195289A1008BDAC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MarketInfo.app/MarketInfo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MarketInfo/MarketInfo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "MarketInfoTests/MarketInfoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		0E5D95B8195289A1008BDAC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MarketInfo.app/MarketInfo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MarketInfo/MarketInfo-Prefix.pch";
+				INFOPLIST_FILE = "MarketInfoTests/MarketInfoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E5D9582195289A1008BDAC0 /* Build configuration list for PBXProject "MarketInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5D95B1195289A1008BDAC0 /* Debug */,
+				0E5D95B2195289A1008BDAC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E5D95B3195289A1008BDAC0 /* Build configuration list for PBXNativeTarget "MarketInfo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5D95B4195289A1008BDAC0 /* Debug */,
+				0E5D95B5195289A1008BDAC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E5D95B6195289A1008BDAC0 /* Build configuration list for PBXNativeTarget "MarketInfoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5D95B7195289A1008BDAC0 /* Debug */,
+				0E5D95B8195289A1008BDAC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E5D957F195289A1008BDAC0 /* Project object */;
+}

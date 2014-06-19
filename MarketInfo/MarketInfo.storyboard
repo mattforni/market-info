@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="JMv-UZ-SdR">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Markets View Controller - Markets-->
+        <scene sceneID="mXQ-tJ-vKQ">
+            <objects>
+                <viewController title="Markets" id="1zP-IN-qUH" customClass="MIMarketsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AMK-Dk-1yL"/>
+                        <viewControllerLayoutGuide type="bottom" id="MZC-7Z-NXu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bdZ-jR-9KF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <pickerView tag="-1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pkH-bP-E9g">
+                                <rect key="frame" x="0.0" y="473" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1zP-IN-qUH" id="yg8-3K-Pzz"/>
+                                    <outlet property="delegate" destination="1zP-IN-qUH" id="rID-Cz-yaX"/>
+                                </connections>
+                            </pickerView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eaA-XJ-iQs">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZx-Zn-h0J" customClass="MIStatusLabel">
+                                <rect key="frame" x="0.0" y="85" width="320" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="7Fr-WL-dcQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="eaA-XJ-iQs" secondAttribute="centerY" id="90L-7f-1wA"/>
+                            <constraint firstItem="DZx-Zn-h0J" firstAttribute="leading" secondItem="bdZ-jR-9KF" secondAttribute="leading" id="CL9-hk-rh6"/>
+                            <constraint firstAttribute="trailing" secondItem="DZx-Zn-h0J" secondAttribute="trailing" id="DgY-nk-x0l"/>
+                            <constraint firstAttribute="trailing" secondItem="pkH-bP-E9g" secondAttribute="trailing" id="DuO-do-9pl"/>
+                            <constraint firstItem="MZC-7Z-NXu" firstAttribute="top" secondItem="pkH-bP-E9g" secondAttribute="bottom" constant="-67" id="JNI-Et-53C"/>
+                            <constraint firstItem="DZx-Zn-h0J" firstAttribute="top" secondItem="AMK-Dk-1yL" secondAttribute="bottom" constant="21" id="KHe-Bf-1Lf"/>
+                            <constraint firstItem="pkH-bP-E9g" firstAttribute="leading" secondItem="bdZ-jR-9KF" secondAttribute="leading" id="UxC-Nc-WWN"/>
+                            <constraint firstAttribute="centerX" secondItem="eaA-XJ-iQs" secondAttribute="centerX" id="vMi-oY-ZAM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Markets" id="aor-oT-ipn"/>
+                    <connections>
+                        <outlet property="marketPicker" destination="pkH-bP-E9g" id="M0g-1d-kXK"/>
+                        <outlet property="spinner" destination="eaA-XJ-iQs" id="eyW-kk-0d3"/>
+                        <outlet property="statusLabel" destination="DZx-Zn-h0J" id="Aa2-QV-jZO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NsI-1r-Hyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="41"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xAp-L6-XaH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JMv-UZ-SdR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mj1-sn-pom">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1zP-IN-qUH" kind="relationship" relationship="rootViewController" id="l7I-6X-fSN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wVg-lh-a3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="492" y="41"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
