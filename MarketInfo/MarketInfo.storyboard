@@ -38,16 +38,25 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKY-q9-iLY">
+                                <rect key="frame" x="0.0" y="170" width="320" height="285"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="eaA-XJ-iQs" secondAttribute="centerY" id="90L-7f-1wA"/>
                             <constraint firstItem="DZx-Zn-h0J" firstAttribute="leading" secondItem="bdZ-jR-9KF" secondAttribute="leading" id="CL9-hk-rh6"/>
+                            <constraint firstItem="WKY-q9-iLY" firstAttribute="leading" secondItem="bdZ-jR-9KF" secondAttribute="leading" id="DHl-en-ebK"/>
                             <constraint firstAttribute="trailing" secondItem="DZx-Zn-h0J" secondAttribute="trailing" id="DgY-nk-x0l"/>
                             <constraint firstAttribute="trailing" secondItem="pkH-bP-E9g" secondAttribute="trailing" id="DuO-do-9pl"/>
                             <constraint firstItem="MZC-7Z-NXu" firstAttribute="top" secondItem="pkH-bP-E9g" secondAttribute="bottom" constant="-67" id="JNI-Et-53C"/>
                             <constraint firstItem="DZx-Zn-h0J" firstAttribute="top" secondItem="AMK-Dk-1yL" secondAttribute="bottom" constant="21" id="KHe-Bf-1Lf"/>
                             <constraint firstItem="pkH-bP-E9g" firstAttribute="leading" secondItem="bdZ-jR-9KF" secondAttribute="leading" id="UxC-Nc-WWN"/>
+                            <constraint firstItem="WKY-q9-iLY" firstAttribute="top" secondItem="AMK-Dk-1yL" secondAttribute="bottom" constant="106" id="dUN-xW-6ol"/>
+                            <constraint firstAttribute="trailing" secondItem="WKY-q9-iLY" secondAttribute="trailing" id="n1w-8F-M4o"/>
+                            <constraint firstItem="MZC-7Z-NXu" firstAttribute="top" secondItem="WKY-q9-iLY" secondAttribute="bottom" constant="113" id="pox-FK-evP"/>
                             <constraint firstAttribute="centerX" secondItem="eaA-XJ-iQs" secondAttribute="centerX" id="vMi-oY-ZAM"/>
                         </constraints>
                     </view>

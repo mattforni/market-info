@@ -20,16 +20,9 @@
         market.name = json[@"name"];
         market.open = [json[@"is_open"] boolValue];
         if (market.open) {
-            // TODO implement closes at
+            market.closesAt = [dateFormat dateFromString:json[@"closes_at"]];
         } else {
-            // TODO update to use 'opens_at' instead of 'next_open'
-            NSMutableString *openDate = [[NSMutableString alloc] init];
-            [openDate appendString:json[@"next_open"]];
-            [openDate appendString:@" +0400"];
-            NSLog(@"%@", openDate);
-            // TODO update server to include timezone offset
-            market.opensAt = [dateFormat dateFromString:openDate];
-            NSLog(@"%@", market.opensAt);
+            market.opensAt = [dateFormat dateFromString:json[@"opens_at"]];
         }
         market.timeZone = json[@"time_zone"];
     }
