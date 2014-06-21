@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MIMarketData.h"
-#import "MIStatusLabel.h"
+#import "MIOpenLabel.h"
 #import "MIUIHelper.h"
 
 @interface MIMarketsViewController : UIViewController <UIPickerViewDelegate, UIPickerViewDataSource>

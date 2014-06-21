@@ -14,7 +14,7 @@
 @property NSArray *markets;
 @property MIMarket *selectedMarket;
 @property (weak, nonatomic) IBOutlet UIPickerView *marketPicker;
-@property (weak, nonatomic) IBOutlet MIStatusLabel *statusLabel;
+@property (weak, nonatomic) IBOutlet MIOpenLabel *openLabel;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
@@ -34,7 +34,7 @@
 {
     [super viewDidLoad];
     [_marketPicker setHidden:YES];
-    [_statusLabel setHidden:YES];
+    [_openLabel setHidden:YES];
     
     _data = [[MIMarketData alloc] init];
     _markets = [NSArray array];
@@ -82,7 +82,7 @@
         
         [_spinner stopAnimating];
         [_marketPicker setHidden:NO];
-        [_statusLabel setHidden:NO];
+        [_openLabel setHidden:NO];
     }
 }
 
@@ -103,8 +103,7 @@
 #pragma mark View
 - (void)updateDisplay
 {
-    [_statusLabel setOpen:_selectedMarket.open];
+    [_openLabel setOpen:_selectedMarket.open];
 }
-
 
 @end

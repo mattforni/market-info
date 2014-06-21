@@ -10,11 +10,11 @@
 
 @interface MIMarket : NSObject
 
-+ (id)initFromJson:(NSDictionary *)json;
-+ (id)initWithNameAndTimeZone:(NSString *)name timeZone:(NSString *)timeZone;
++ (id)initWithJSON:(NSDictionary *)json;
 
-@property NSString* name;
+@property NSDate *closesAt, *opensAt;
+@property NSString *name;
 @property BOOL open;
-@property NSString* timeZone;
+@property NSString *timeZone;
 
 @end

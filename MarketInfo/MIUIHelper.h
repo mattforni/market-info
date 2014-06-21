@@ -11,6 +11,5 @@
 @interface MIUIHelper : NSObject
 
 + (UIColor *)colorFromRGB:(NSInteger)r green:(NSInteger)g blue:(NSInteger)b;
-+ (void)padView:(UIView *)view padding:(UIEdgeInsets)insets;
 
 @end

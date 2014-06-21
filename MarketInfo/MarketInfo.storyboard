@@ -28,13 +28,14 @@
                                 <rect key="frame" x="150" y="274" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZx-Zn-h0J" customClass="MIStatusLabel">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPEN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZx-Zn-h0J" customClass="MIOpenLabel">
                                 <rect key="frame" x="0.0" y="85" width="320" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="7Fr-WL-dcQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -53,8 +54,8 @@
                     <navigationItem key="navigationItem" title="Markets" id="aor-oT-ipn"/>
                     <connections>
                         <outlet property="marketPicker" destination="pkH-bP-E9g" id="M0g-1d-kXK"/>
+                        <outlet property="openLabel" destination="DZx-Zn-h0J" id="9ht-fm-VPj"/>
                         <outlet property="spinner" destination="eaA-XJ-iQs" id="eyW-kk-0d3"/>
-                        <outlet property="statusLabel" destination="DZx-Zn-h0J" id="Aa2-QV-jZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NsI-1r-Hyg" userLabel="First Responder" sceneMemberID="firstResponder"/>

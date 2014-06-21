@@ -34,7 +34,7 @@ const NSString *MI_URL = @"http://market-info.herokuapp.com/%@?format=json";
             NSMutableArray *markets = [NSMutableArray array];
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             for (id market in json) {
-                [markets addObject: [MIMarket initWithNameAndTimeZone:market[@"name"] timeZone:market[@"time_zone"]]];
+                [markets addObject: [MIMarket initWithJSON:market]];
             }
             self.markets = [NSArray arrayWithArray:markets];
             [[NSNotificationCenter defaultCenter] postNotificationName:@"MIMarketsLoaded"

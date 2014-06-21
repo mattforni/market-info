@@ -24,7 +24,7 @@
 		0E5D95C019528E45008BDAC0 /* MIMarketData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D95BF19528E45008BDAC0 /* MIMarketData.m */; };
 		0E5D95C319528F49008BDAC0 /* MIMarket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5D95C219528F49008BDAC0 /* MIMarket.m */; };
 		0E796AE31953AD0900D6F7FD /* MIUIHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E796AE21953AD0900D6F7FD /* MIUIHelper.m */; };
-		0E796AE61953C1DA00D6F7FD /* MIStatusLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E796AE51953C1DA00D6F7FD /* MIStatusLabel.m */; };
+		0E796AE61953C1DA00D6F7FD /* MIOpenLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E796AE51953C1DA00D6F7FD /* MIOpenLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,8 +63,8 @@
 		0E5D95C219528F49008BDAC0 /* MIMarket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIMarket.m; sourceTree = "<group>"; };
 		0E796AE11953AD0900D6F7FD /* MIUIHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIUIHelper.h; sourceTree = "<group>"; };
 		0E796AE21953AD0900D6F7FD /* MIUIHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIUIHelper.m; sourceTree = "<group>"; };
-		0E796AE41953C1DA00D6F7FD /* MIStatusLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIStatusLabel.h; sourceTree = "<group>"; };
-		0E796AE51953C1DA00D6F7FD /* MIStatusLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIStatusLabel.m; sourceTree = "<group>"; };
+		0E796AE41953C1DA00D6F7FD /* MIOpenLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MIOpenLabel.h; sourceTree = "<group>"; };
+		0E796AE51953C1DA00D6F7FD /* MIOpenLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MIOpenLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +129,8 @@
 				0E5D959C195289A1008BDAC0 /* Images.xcassets */,
 				0E5D9591195289A1008BDAC0 /* Supporting Files */,
 				0E5D95B9195289C7008BDAC0 /* MarketInfo.storyboard */,
-				0E796AE41953C1DA00D6F7FD /* MIStatusLabel.h */,
-				0E796AE51953C1DA00D6F7FD /* MIStatusLabel.m */,
+				0E796AE41953C1DA00D6F7FD /* MIOpenLabel.h */,
+				0E796AE51953C1DA00D6F7FD /* MIOpenLabel.m */,
 				0E5D95BB19528BA2008BDAC0 /* MIMarketsViewController.h */,
 				0E5D95BC19528BA2008BDAC0 /* MIMarketsViewController.m */,
 				0E796AE11953AD0900D6F7FD /* MIUIHelper.h */,
@@ -274,7 +274,7 @@
 				0E5D9597195289A1008BDAC0 /* main.m in Sources */,
 				0E5D95BD19528BA2008BDAC0 /* MIMarketsViewController.m in Sources */,
 				0E5D95C319528F49008BDAC0 /* MIMarket.m in Sources */,
-				0E796AE61953C1DA00D6F7FD /* MIStatusLabel.m in Sources */,
+				0E796AE61953C1DA00D6F7FD /* MIOpenLabel.m in Sources */,
 				0E796AE31953AD0900D6F7FD /* MIUIHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

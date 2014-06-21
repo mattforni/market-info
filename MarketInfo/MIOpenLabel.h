@@ -1,5 +1,5 @@
 //
-//  MIStatusLabel.h
+//  MIOpenLabel.h
 //  MarketInfo
 //
 //  Created by Matthew Fornaciari on 6/19/14.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "MIUIHelper.h"
 
-@interface MIStatusLabel : UILabel
+@interface MIOpenLabel : UILabel
 
 - (void)setOpen:(BOOL)open;
 

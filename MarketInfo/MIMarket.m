@@ -10,23 +10,28 @@
 
 @implementation MIMarket
 
-+ (id)initFromJson:(NSDictionary *)json
++ (id)initWithJSON:(NSDictionary *)json
 {
     MIMarket *market = [[MIMarket alloc] init];
     if (market) {
+        NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+        [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss ZZZ"];
+
         market.name = json[@"name"];
         market.open = [json[@"is_open"] boolValue];
+        if (market.open) {
+            // TODO implement closes at
+        } else {
+            // TODO update to use 'opens_at' instead of 'next_open'
+            NSMutableString *openDate = [[NSMutableString alloc] init];
+            [openDate appendString:json[@"next_open"]];
+            [openDate appendString:@" +0400"];
+            NSLog(@"%@", openDate);
+            // TODO update server to include timezone offset
+            market.opensAt = [dateFormat dateFromString:openDate];
+            NSLog(@"%@", market.opensAt);
+        }
         market.timeZone = json[@"time_zone"];
-    }
-    return market;
-}
-
-+ (id)initWithNameAndTimeZone:(NSString *)name timeZone:(NSString *)timeZone
-{
-    MIMarket *market = [[MIMarket alloc] init];
-    if (market) {
-        market.name = name;
-        market.timeZone = timeZone;
     }
     return market;
 }
