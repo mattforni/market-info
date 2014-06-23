@@ -45,11 +45,13 @@
 - (void)setOpen:(BOOL)open
 {
     if (open) {
+        self.text = @"OPEN";
         self.textColor = [MIUIHelper colorFromRGB:60 green:118 blue:61];
         self.backgroundColor = [MIUIHelper colorFromRGB:233 green:240 blue:216];
         _top.backgroundColor = [MIUIHelper colorFromRGB:60 green:118 blue:61];
         _bottom.backgroundColor = [MIUIHelper colorFromRGB:60 green:118 blue:61];
     } else {
+        self.text = @"CLOSED";
         self.textColor = [MIUIHelper colorFromRGB:160 green:160 blue:160];
         self.backgroundColor = [MIUIHelper colorFromRGB:245 green:245 blue:245];
         _top.backgroundColor = [MIUIHelper colorFromRGB:160 green:160 blue:160];
