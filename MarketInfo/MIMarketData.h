@@ -11,6 +11,6 @@
 
 @interface MIMarketData : NSObject
 
-- (MIMarket*)getMarket:(NSString *)name;
+- (void)loadMarket:(NSString *)name;
 
 @end

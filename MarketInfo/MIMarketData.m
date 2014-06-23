@@ -28,7 +28,7 @@ const NSString *MI_URL = @"http://market-info.herokuapp.com/%@?format=json";
         self.markets = [NSArray array];
         
         // Retrieve all available markets
-        NSString *url = [NSString stringWithFormat:@"http://market-info.herokuapp.com/%@?format=json", @"markets"];
+        NSString *url = @"http://market-info.herokuapp.com/markets?format=json";
         NSURLSessionDataTask *task = [self.session dataTaskWithURL:[NSURL URLWithString:url]
                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             NSMutableArray *markets = [NSMutableArray array];
@@ -45,12 +45,16 @@ const NSString *MI_URL = @"http://market-info.herokuapp.com/%@?format=json";
     return self;
 }
 
-- (MIMarket *)getMarket:(NSString *)name
+- (void)loadMarket:(NSString *)name
 {
-    MIMarket *market = [[MIMarket alloc] init];
-    market.name = name;
-    market.timeZone = @"America/New York";
-    return market;
+    NSString *url = [NSString stringWithFormat:@"http://market-info.herokuapp.com/markets/%@?format=json", name];
+    NSURLSessionDataTask *task = [self.session dataTaskWithURL:[NSURL URLWithString:url]
+            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"MIMarketLoaded"
+            object:self userInfo:@{@"market": [MIMarket initWithJSON:json], @"name": name}];
+    }];
+    [task resume];
 }
 
 @end
