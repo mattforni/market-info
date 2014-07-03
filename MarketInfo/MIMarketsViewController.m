@@ -10,7 +10,6 @@
 
 @interface MIMarketsViewController ()
 
-@property MIMarketData *data;
 @property NSArray *markets;
 @property MIMarket *selectedMarket;
 @property int secondsLeft;
@@ -33,26 +32,27 @@
 
 #pragma mark -
 #pragma mark Core
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {}
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        _markets = [NSArray array];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self
+            selector:@selector(marketLoaded:) name:@"MarketLoaded" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+            selector:@selector(marketsLoaded:) name:@"MarketsLoaded" object:nil];
+    }
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     [_marketPicker setHidden:YES];
     [_openLabel setHidden:YES];
     [_timerView setHidden:YES];
-    
-    _data = [[MIMarketData alloc] init];
-    _markets = [NSArray array];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-        selector:@selector(marketLoaded:) name:@"MIMarketLoaded" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-        selector:@selector(marketsLoaded:) name:@"MIMarketsLoaded" object:nil];
 }
 
 - (void)dealloc
@@ -148,10 +148,12 @@
 - (void) updateTimer
 {
     _secondsLeft--;
-    if (_secondsLeft <= 0) {
+    if (_secondsLeft < 0) {
         [_timer invalidate];
         _timer = nil;
-        [_data loadMarket:_selectedMarket.name];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"LoadMarket"
+            object:self userInfo:@{@"name": _selectedMarket.name}];
+        return;
     }
 
     int days = _secondsLeft / 86400;

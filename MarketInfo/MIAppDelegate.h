@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MIMarketData.h"
 
 @interface MIAppDelegate : UIResponder <UIApplicationDelegate>
 

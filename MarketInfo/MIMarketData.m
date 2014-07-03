@@ -8,51 +8,67 @@
 
 #import "MIMarketData.h"
 
-const NSString *MI_URL = @"http://market-info.herokuapp.com/%@?format=json";
-
 @interface MIMarketData()
 
-@property NSArray *markets;
+@property NSString *marketURL, *marketsURL;
 @property NSURLSession *session;
 
 @end
 
 @implementation MIMarketData
 
+static MIMarketData *instance;
+
++ (MIMarketData *)instance
+{
+    if (instance == nil) { instance = [[super alloc] init]; }
+    return instance;
+}
+
 - (id)init
 {
     self = [super init];
     if (self) {
-        // Initialize variables
-        self.session = [NSURLSession sharedSession];
-        self.markets = [NSArray array];
-        
-        // Retrieve all available markets
-        NSString *url = @"http://market-info.herokuapp.com/markets?format=json";
-        NSURLSessionDataTask *task = [self.session dataTaskWithURL:[NSURL URLWithString:url]
-                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            NSMutableArray *markets = [NSMutableArray array];
-            NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            for (id market in json) {
-                [markets addObject: [MIMarket initWithJSON:market]];
-            }
-            self.markets = [NSArray arrayWithArray:markets];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"MIMarketsLoaded"
-                object:self userInfo:@{@"markets": self.markets}];
-        }];
-        [task resume];
+        _marketURL = @"http://market-info.herokuapp.com/markets/%@?format=json";
+        _marketsURL = @"http://market-info.herokuapp.com/markets?format=json";
+        _session = [NSURLSession sharedSession];
+
+        [[NSNotificationCenter defaultCenter] addObserver:self
+            selector:@selector(loadMarket:) name:@"LoadMarket" object:nil];
     }
     return self;
 }
 
-- (void)loadMarket:(NSString *)name
+- (void)dealloc
 {
-    NSString *url = [NSString stringWithFormat:@"http://market-info.herokuapp.com/markets/%@?format=json", name];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)loadMarket:(NSNotification *)notification
+{
+    NSString *name = notification.userInfo[@"name"];
+    if (name == nil || name.length == 0) { return; }
+
+    NSString *url = [NSString stringWithFormat: _marketURL, name];
     NSURLSessionDataTask *task = [self.session dataTaskWithURL:[NSURL URLWithString:url]
             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"MIMarketLoaded"
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"MarketLoaded"
             object:self userInfo:@{@"market": [MIMarket initWithJSON:json], @"name": name}];
+    }];
+
+    [task resume];
+}
+
+- (void)loadMarkets
+{
+    NSURLSessionDataTask *task = [self.session dataTaskWithURL:[NSURL URLWithString:_marketsURL]
+            completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSMutableArray *markets = [NSMutableArray array];
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        for (id market in json) { [markets addObject: [MIMarket initWithJSON:market]]; }
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"MarketsLoaded"
+            object:self userInfo:@{@"markets": [NSArray arrayWithArray:markets]}];
     }];
     [task resume];
 }

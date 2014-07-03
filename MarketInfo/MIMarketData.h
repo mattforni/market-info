@@ -11,6 +11,7 @@
 
 @interface MIMarketData : NSObject
 
-- (void)loadMarket:(NSString *)name;
++ (MIMarketData *)instance;
+- (void)loadMarkets;
 
 @end
