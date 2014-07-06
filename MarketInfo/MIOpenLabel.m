@@ -18,8 +18,6 @@
 
 @implementation MIOpenLabel
 
-
-
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
