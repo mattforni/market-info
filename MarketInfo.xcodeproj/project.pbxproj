@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0F35ED1969D8C3007F465C /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0F35EC1969D8C3007F465C /* StoreKit.framework */; };
+		0E0F35EF1969DAC1007F465C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E0F35EE1969DAC1007F465C /* GameKit.framework */; };
 		0E5D958B195289A1008BDAC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5D958A195289A1008BDAC0 /* Foundation.framework */; };
 		0E5D958D195289A1008BDAC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5D958C195289A1008BDAC0 /* CoreGraphics.framework */; };
 		0E5D958F195289A1008BDAC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E5D958E195289A1008BDAC0 /* UIKit.framework */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E0F35EC1969D8C3007F465C /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		0E0F35EE1969DAC1007F465C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		0E5D9587195289A1008BDAC0 /* MarketInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarketInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5D958A195289A1008BDAC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0E5D958C195289A1008BDAC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -74,7 +78,9 @@
 			files = (
 				0E5D958D195289A1008BDAC0 /* CoreGraphics.framework in Frameworks */,
 				0E5D958F195289A1008BDAC0 /* UIKit.framework in Frameworks */,
+				0E0F35ED1969D8C3007F465C /* StoreKit.framework in Frameworks */,
 				0E5D958B195289A1008BDAC0 /* Foundation.framework in Frameworks */,
+				0E0F35EF1969DAC1007F465C /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +119,8 @@
 		0E5D9589195289A1008BDAC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E0F35EE1969DAC1007F465C /* GameKit.framework */,
+				0E0F35EC1969D8C3007F465C /* StoreKit.framework */,
 				0E5D958A195289A1008BDAC0 /* Foundation.framework */,
 				0E5D958C195289A1008BDAC0 /* CoreGraphics.framework */,
 				0E5D958E195289A1008BDAC0 /* UIKit.framework */,
@@ -220,6 +228,17 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___MATTFORNI___";
 				TargetAttributes = {
+					0E5D9586195289A1008BDAC0 = {
+						DevelopmentTeam = BCZ3Y94V2A;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
 					0E5D95A1195289A1008BDAC0 = {
 						TestTargetID = 0E5D9586195289A1008BDAC0;
 					};
@@ -392,11 +411,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Fornaciari (7AA2MG35RC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MarketInfo/MarketInfo-Prefix.pch";
 				INFOPLIST_FILE = "MarketInfo/MarketInfo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -406,11 +427,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Fornaciari (7AA2MG35RC)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MarketInfo/MarketInfo-Prefix.pch";
 				INFOPLIST_FILE = "MarketInfo/MarketInfo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
